@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "Deep Blue": {
             hex: "#004D7F",
-            imageUrl: "https://www.apple.com/v/iphone-17-pro/a/images/overview/colors/iphone-17-pro-deep-blue_screen__efgh.png"   // REPLACE THIS
+            imageUrl: "https://idream.pl/images/detailed/114/iPhone_17_Pro_Deep_Blue_PDP_Image_Position_1__pl-PL_lsfy-yv.jpg"   // REPLACE THIS
         },
         "Silver": {
             hex: "#E8E8E8",
