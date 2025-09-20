@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorDetailsMap = {
         "Cosmic Orange": {
             hex: "#FF5A00",
-            imageUrl: "https://idream.pl/images/thumbnails/4889/4000/detailed/114/iPhone_17_Pro_Cosmic_Orange_PDP_Image_Position_1__pl-PL_llik-3v.jpg"// REPLACE THIS
+            imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNgvMJ_FlfJMj1xXQ60tLbs6ZIghI25hTD0JdkbeJNvC_CMihDGn1gnMa5&s=10"// REPLACE THIS
         },
         "Deep Blue": {
             hex: "#004D7F",
-            imageUrl: "https://idream.pl/images/detailed/114/iPhone_17_Pro_Deep_Blue_PDP_Image_Position_1__pl-PL_lsfy-yv.jpg" 
+            imageUrl: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-witb-deepblue-202509_FMT_WHH?wid=560&hei=744&fmt=jpeg&qlt=90&.v=NXh3OEZPWW1IYUpzT1hwc0dnVnRpenN1MWRJeER1RWY5dmxCMkt5WDBCUjlJYllOZmpjUUoxWmQvQ2FURDgzeTFVT2hWYlJVSEZVS2QwY2JUYnE5MDRKWlgzZzdyUXEzcGE2bUxYbWVvdHJLdHJVaG5ubVo4T210Q1p5R1E1UlY" 
         },
         "Silver": {
             hex: "#E8E8E8",
