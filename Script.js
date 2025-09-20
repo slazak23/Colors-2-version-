@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "Silver": {
             hex: "#E8E8E8",
-            imageUrl: "https://www.apple.com/v/iphone-17-pro/a/images/overview/colors/iphone-17-pro-silver_screen__ijkl.png"       // REPLACE THIS
+            imageUrl: "https://www.scandinavianphoto.dk/globalassets/1103950_iphone17pro_silver_1.jpg?ref=09ECE31E15&w=960&h=960&mode=max"       // REPLACE THIS
         }
     };
 
