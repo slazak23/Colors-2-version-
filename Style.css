@@ -1,0 +1,74 @@
+body {
+    background-color: #f5f5f7; /* Apple's light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #1d1d1f; /* Apple's charcoal color for text */
+    text-align: center;
+}
+
+.container {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.color-showcase {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.color-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.color-button:active {
+    transform: scale(1.05);
+}
+
+/* Individual color styles */
+#cosmic-orange {
+    background-color: #FF5A00; /* A representative color for Cosmic Orange */
+}
+
+#deep-blue {
+    background-color: #004D7F; /* A representative color for Deep Blue */
+}
+
+#silver {
+    background-color: #E8E8E8; /* A representative color for Silver */
+}
+
+.prompt-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/* Optional: a subtle hover effect that highlights the button */
+.color-button.active {
+    border-color: #007aff; /* Apple's signature blue for selected items */
+}
