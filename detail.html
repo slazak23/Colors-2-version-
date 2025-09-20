@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your New iPhone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* This style block is specific to the detail page for the iPhone visualization */
+        body {
+            background-color: #f5f5f7; /* Apple's light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #1d1d1f; /* Apple's charcoal color for text */
+            text-align: center;
+            position: relative; /* For the back button positioning */
+        }
+
+        .container {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex; /* Use flexbox for vertical centering within container */
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Space between title and phone */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0; /* Remove default margin */
+            color: #1d1d1f;
+        }
+
+        .iphone-screen {
+            width: 300px; /* Adjust size as needed */
+            height: 600px; /* Adjust size as needed */
+            border: 15px solid #222; /* iPhone bezel */
+            border-radius: 40px; /* Rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            background-color: var(--iphone-color, #ccc); /* Default color, overridden by JS */
+            position: relative;
+            overflow: hidden; /* For notch and speaker */
+            flex-shrink: 0; /* Prevent shrinking on smaller screens */
+        }
+
+        .iphone-screen::before { /* Top notch */
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 120px;
+            height: 30px;
+            background: #222;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 10;
+        }
+
+        .iphone-screen::after { /* Side button (power) - simplified for visual only */
+            content: '';
+            position: absolute;
+            right: -15px; /* Adjust to be slightly outside the border */
+            top: 150px;
+            width: 3px;
+            height: 70px;
+            background: #222;
+            border-radius: 2px;
+        }
+
+        .iphone-speaker { /* Simplified speaker within the notch */
+            position: absolute;
+            top: 5px; /* Within the notch area */
+            width: 40px;
+            height: 5px;
+            background: #444;
+            border-radius: 5px;
+            z-index: 11; /* Above the notch */
+        }
+
+        #screen-text {
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            font-weight: bold;
+        }
+
+        .back-button {
+            position: fixed; /* Fixed position relative to viewport */
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            z-index: 100; /* Ensure it's above other elements */
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back</a>
+    <div class="container">
+        <h1 id="selected-color-name">Your New iPhone</h1>
+        <div class="iphone-screen">
+            <div class="iphone-speaker"></div>
+            <p id="screen-text">Loading...</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedColor = urlParams.get('color'); // e.g., "Deep Blue"
+            const hexColor = urlParams.get('hex');     // e.g., "#004D7F"
+
+            const colorNameDisplay = document.getElementById('selected-color-name');
+            const iphoneScreen = document.querySelector('.iphone-screen');
+            const screenText = document.getElementById('screen-text');
+
+            if (selectedColor && hexColor) {
+                // Set the main title
+                colorNameDisplay.textContent = `${selectedColor} iPhone`;
+                // Set the CSS variable for the iPhone screen background
+                iphoneScreen.style.setProperty('--iphone-color', hexColor);
+                // Set the text inside the iPhone screen
+                screenText.textContent = selectedColor;
+            } else {
+                colorNameDisplay.textContent = 'No color selected';
+                iphoneScreen.style.setProperty('--iphone-color', '#ccc'); // Default gray
+                screenText.textContent = 'Please go back and choose a color.';
+            }
+        });
+    </script>
+</body>
+</html>
