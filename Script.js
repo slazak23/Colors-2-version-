@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorDetailsMap = {
         "Cosmic Orange": {
             hex: "#FF5A00",
-            imageUrl: "https://www.apple.com/v/iphone-17-pro/a/images/overview/colors/iphone-17-pro-cosmic-orange_screen__abcd.png" // REPLACE THIS
+            imageUrl: "https://idream.pl/images/thumbnails/4889/4000/detailed/114/iPhone_17_Pro_Cosmic_Orange_PDP_Image_Position_1__pl-PL_llik-3v.jpg"// REPLACE THIS
         },
         "Deep Blue": {
             hex: "#004D7F",
