@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "Deep Blue": {
             hex: "#004D7F",
-            imageUrl: "https://idream.pl/images/detailed/114/iPhone_17_Pro_Deep_Blue_PDP_Image_Position_1__pl-PL_lsfy-yv.jpg"   // REPLACE THIS
+            imageUrl: "https://idream.pl/images/detailed/114/iPhone_17_Pro_Deep_Blue_PDP_Image_Position_1__pl-PL_lsfy-yv.jpg" 
         },
         "Silver": {
             hex: "#E8E8E8",
